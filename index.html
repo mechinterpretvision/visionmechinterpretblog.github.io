@@ -148,18 +148,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Identifying layers within text-to-image models which control visual attributes can facilitate efficient model editing through closed-form updates.
-            Recent work, leveraging causal tracing show that early Stable-Diffusion variants confine knowledge primarily to the first layer of the CLIP text-encoder,
-            while it diffuses throughout the UNet.
-            Extending this framework, we observe that for recent models (e.g., SD-XL, DeepFloyd), causal tracing fails in pinpointing localized knowledge,
-            highlighting challenges in model editing.
-            To address this issue, we introduce the concept of <i>mechanistic localization</i> in text-to-image models,
-            where knowledge about various visual attributes (e.g., "style", "objects", "facts") can be <i>mechanistically</i> localized
-            to a small fraction of layers in the UNet, thus facilitating efficient model editing.
-            We localize knowledge using our method <span style="font-variant: small-caps;">LocoGen</span> which measures the direct effect of intermediate layers to output generation by performing interventions in the cross-attention layers of the UNet. 
-            We then employ <span style="font-variant: small-caps;">LocoEdit</span>, a fast closed-form editing method across popular open-source text-to-image models (including the latest SD-XL)
-            and explore the possibilities of neuron-level model editing.
-            Using <i>mechanistic localization</i>, our work offers a better view of successes and failures in localization-based text-to-image model editing.
+            To write.
           </p>
         </div>
       </div>
@@ -180,7 +169,8 @@
         <h2 class="title is-3 has-text-centered"><span style="font-variant: small-caps;">Causal Tracing</span> For Text-to-Image Generative Models</h2>
 
         <!-- Prompt Interpolation image -->
-        
+
+        <!--
         <div class="content has-text-centered">
             <img src="./static/images/main_figure.jpg" width="90%">
         </div>
@@ -195,7 +185,9 @@
             measures the direct effect of intermediate layers, as opposed to indirect effects in causal tracing. 
           </p>
           <br>
-        </div>
+        </div> -->
+
+          
         <!-- Prompt Interpolation image -->
         
         <!-- <div class="container is-max-desktop has-text-centered">
