@@ -148,7 +148,11 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In the recent times, a plethora of mechanistic interpretability methods have been developed, used towards understanding and modifying different aspects of language models. However, progress towards understanding multimodal and vision models have been slow when compared to the interest in mechanistic interpretability for language models.  In the past one year, Feizi Lab has been developing and adapting interpretability tools to understand the inner workings of multimodal models and vision models, with a downstream emphasis on applications (e.g., removing copyrighted content in T2I models, improving compositionality, mitigating spurious correlations in vision models, updating rare knowledge in MLLMs). This blog provides a comprehensive overview of our year-long efforts in mechanistic interpretability beyond language models and discusses the open research problems in this area. 
+            In the recent times, a plethora of mechanistic interpretability methods have been developed, used towards understanding and modifying different aspects of language models.
+            However, progress towards understanding multimodal and vision models have been slow when compared to the interest in mechanistic interpretability for language models.
+            In the past one year, Feizi Lab has been developing and adapting interpretability tools to understand the inner workings of multimodal models and vision models,
+            with a downstream emphasis on applications (e.g., removing copyrighted content in T2I models, improving compositionality, mitigating spurious correlations in vision models, updating rare knowledge in MLLMs).
+            This blog provides a comprehensive overview of our year-long efforts in mechanistic interpretability beyond language models and discusses the open research problems in this area. 
           </p>
         </div>
       </div>
@@ -455,7 +459,20 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered"><span style="font-variant: small-caps;">Localizing Knowledge</span> in Cross-Attention Layers</h2>
-        
+        <br>
+        Given the limitations of causal tracing for localizing knowledge within text encoders of recent models,
+        we sought to develop a more generalizable approach for knowledge localization in text-to-image models—one that could be effectively scaled and applied to modern architectures.
+        In this work, we investiage whether knowledge representing artistic styles, objects, or facts can be localized in cross-attention layers of text-to-image models.
+        Interestingly, we observed that among significant number of cross attention layers, only a select few play a key role in controlling the generation of specific concepts.
+        In fact, the model heavily relies on information provided by those layers to generate those concepts.
+        e.g., we observed that in Stable Diffusion XL, layers 45-48 among X layers are responsible for Van Gogh style.
+        Modifying the input only in these specific layers leads the U-Net to produce an image that noticeably loses its Van Gogh characteristics.
+        Localization within few layers enables an efficient and surgical model editiing method that aims to minimally modify cross-attention layers in those specified layers.
+        This happens by carefully editing key value matrices within those layers, mapping original text prompts to representations that exclude the targeted concept.
+        Importantly, the edited models retain their general utility and continue to generate high-quality images when prompted with general inputs.
+
+        Webpage <a href="https://t2i-knowledge-localization.github.io">(Link)</a>
+
         <!-- Prompt Interpolation image -->
         <!-- <h3 class="title is-4">Source (i): Errorneous Attention Contributions in CLIP Text Encoder</h3> -->
 
@@ -487,7 +504,6 @@
               <li>X<sub>target</sub> refers to text-embeddings of target prompts -- including updated knowledge or lacking the visual attribute;</li>
               <li>W<sub>l</sub><sup>k</sup> that refers to key matrix in localized layer l;</li>
               <li>
-              <!-- W&#770; -->
               <span style="position: relative;">W<span style="position: absolute; top: -10px; left: 3px">^</span></span>
               <sub>l</sub><sup>k</sup> that refers to key matrix in localized layer l.</li>              
             </ul>
