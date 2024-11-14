@@ -7,8 +7,8 @@
     <!-- Replace the content tag with appropriate information -->
     <!-- <meta name="description" content="DESCRIPTION META TAG"> -->
 
-    <meta property='og:title' content='Mitigating Compositional Issues in Text-to-Image Generative Models via Enhanced Text Embeddings. arXiv 2024.'/>
-    <meta property='og:url' content='https://github.com/samyadeepbasu/LocoGen'/>
+    <meta property='og:title' content='Mechanistic Interpretability Beyond Language Models'/>
+    <!-- <meta property='og:url' content='https://github.com/samyadeepbasu/LocoGen'/> -->
     <meta property="og:image" content="static/images/banner.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -22,7 +22,7 @@
     <!-- <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>On Mechanistic Knowledge Localization in Text-to-Image Generative Models</title>
+    <title>Mechanistic Interpretability Beyond Language Models</title>
 
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
     rel="stylesheet">
@@ -57,20 +57,20 @@
           <h1 class="title is-2 publication-title">Mechanistic Interpretability Beyond Language Models</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://samyadeepbasu.github.io">Samyadeep Basu</a><sup></sup><sup>1</sup>,</span>
+              <a href="https://samyadeepbasu.github.io">Samyadeep Basu</a>,
             </span>
             <span class="author-block">
-              <a href="https://k1rezaei.github.io/">Keivan Rezaei</a><sup></sup><sup>1</sup>,
+              <a href="https://k1rezaei.github.io/">Keivan Rezaei</a>,
             </span>
             <br>
             <span class="author-block">
-              <a href="https://priyathamkat.com">Sriram Balasubramaniam</a><sup>1</sup>,
+              <a href="https://sriram.live/">Sriram Balasubramanian</a>,
             </span>
                <span class="author-block">
-              <a href="https://priyathamkat.com">Arman Zarei</a><sup>1</sup>,
+              <a href="https://priyathamkat.com">Arman Zarei</a>,
             </span>
             <span class="author-block">
-              <a href="https://priyathamkat.com">Soheil Feizi</a><sup>1</sup>
+              <a href="https://www.cs.umd.edu/~sfeizi">Soheil Feizi</a>
             </span>
           </div>
 
@@ -101,12 +101,12 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2406.01583"
+                <a href="#vit-decompose"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                      <i class="fas fa-globe"></i>
                   </span>
-                  <span>ViT-Internal</span>
+                  <span>Decompose ViTs</span>
                   </a>
               </span>
               <span class="link-block">
@@ -172,201 +172,6 @@
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered"><span style="font-variant: small-caps;">Causal Tracing</span> For Text-to-Image Generative Models</h2>
 
-        <!-- Prompt Interpolation image -->
-
-        <!--
-        <div class="content has-text-centered">
-            <img src="./static/images/main_figure.jpg" width="90%">
-        </div>
-        <div class="content has-text-justified">
-          <p>
-            To address the <i>universal</i> knowledge localization framework absence across different text-to-image models,
-            we introduce the concept of <i>>mechanistic localization</i> that aims to identify a small number of layers which control the generation of distinct visual attributes,
-            across a spectrum of text-to-image models. 
-            To achieve this, we propose <span style="font-variant: small-caps;">LocoGen</span>, a method that finds a subset of cross-attention layers in the UNet such that when the input to their key and value matrices is changed,
-            output generation for a given visual attribute (e.g., "style") is modified (see above Figure).
-            This intervention in the intermediate layers has a direct effect on the output -- therefore <span style="font-variant: small-caps;">LocoGen</span>
-            measures the direct effect of intermediate layers, as opposed to indirect effects in causal tracing. 
-          </p>
-          <br>
-        </div> -->
-
-          
-        <!-- Prompt Interpolation image -->
-        
-        <!-- <div class="container is-max-desktop has-text-centered">
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/a yellow book and a red vase.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/a red apple and a green train.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/a green leaf and a yellow butterfly.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/A black and white cat sitting in a green bowl.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/a blue backpack and a red book.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/A bathroom with green tile and a red shower curtain.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/a blue bench and a green bowl.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/a blue backpack and a red chair.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/a blue bowl and a red train.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/a brown boat and a blue cat.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/a brown book and a red sheep.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/a fluffy towel and a glass cup.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/a plastic container and a fluffy teddy bear.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/a red chair and a gold clock.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/a red pen and a blue notebook.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/a round cookie and a square container.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/a wooden floor and a fluffy rug.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/The leather jacket and fluffy scarf keep the cold at bay.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/prompt_visualizations/wooden pencil and a glass plate.png"
-              class="interpolation-image"/>
-            </div>
-          </div> -->
-
-        <!-- </div> -->
-        <!--
-        <h3 class="title is-4"><span style="font-variant: small-caps;">LocoGen</span> effectivley identifies important layers!</h3>
-        <div class="content has-text-centered">
-          <img src="./static/images/locogen_localization/locogen.jpg" width="100%">
-        </div>
-        
-        <div class="content has-text-justified">
-          <p>
-            Images generated by intervening on the layers identified by <span style="font-variant: small-caps;">LocoGen</span>
-            across various open-source text-to-image models.
-            We compare the original generation vs. generation by intervening on the layers identified with <span style="font-variant: small-caps;">LocoGen</span>
-            along with a target prompt.
-            We find that across various text-to-image models, visual attributes such as <i>style, objects, facts</i> can be manipulated by intervening only on a very small fraction of cross-attention layers.
-          </p>
-          <br>
-        </div>
-        <br>
-
-        <h3 class="title is-4">How does <span style="font-variant: small-caps;">LocoGen</span> find these layers?</h3>
-        <div class="content has-text-centered">
-          <img src="./static/images/locogen_localization/algorithm.png" width="60%">
-        </div>
-        
-        <div class="content has-text-justified">
-          <p>
-            To apply <span style="font-variant: small-caps;">LocoGen</span> for a particular attribute,
-            we obtain a set of input prompts T that include the particular attribute and corresponding set of prompts T'
-            where each prompt T'<sub>i</sub> there is analogous to a corresponding prompt T<sub>i</sub> in T except that the particular attribute is removed/updated.
-            These prompts serve to create altered images and assess the presence of the specified attribute within them.
-            Let c<sub>i</sub> be the text-embedding of T<sub>i</sub> and c'<sub>i</sub> be that of T'<sub>i</sub>.
-            Given m (number of layers to consider) and M (number of total layers),
-            we examine all M-m+1 possible candidates for controlling layers.
-            For each of them, we generate N altered images where i-th image is generated by giving c'<sub>i</sub> as the input embedding to selected $m$ layers and c<sub>i</sub> to other ones.
-            Then we measure the CLIP-Score of original text prompt T<sub>i</sub> to the generated image for <i>style, objects</i> and target text prompt T'<sub>i</sub>$ to the generated image for <i>facts</i>.
-            For <i>style</i> and <i>objects</i>, drop in CLIP-Score shows the removal of the attribute while for <i>facts</i> increase in score shows similarity to the updated fact.
-            We take the average of the mentioned score across all 1 &leq; i &leq; N.
-            By doing that for all candidates,
-            we report the one with minimum average CLIP-Score for <i>style, objects</i> and maximum average CLIP-Score for <i>facts</i>.
-            These layers could be candidate layers controlling the generation of the specific attribute.
-            Above Algorithm provides the pseudocode to find the best candidate.
-          </p>
-          <br>
-        </div>
-          -->
-        <br>
-
-
-        <!-- Prompt Interpolation image -->
-        <!-- <h3 class="title is-4">(ii) <tt>WiCLP</tt> improves Cross-Attention Masks!</h3>
-        
-        <div class="container is-max-desktop has-text-centered">
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/attention_visualizations/a blue backpack and a red bench.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/attention_visualizations/a green bench and a yellow dog.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/attention_visualizations/a red book and a yellow vase.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/attention_visualizations/a bathroom has brown wall and gold counters.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/attention_visualizations/a black cat sitting in a green bowl.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/attention_visualizations/a brown boat and a blue cat.png"
-              class="interpolation-image"/>
-            </div>
-            <div class="item item-t2i1">
-              <img id="myt2i0" src="./static/images/attention_visualizations/a green blanket and a blue pillow.png"
-              class="interpolation-image"/>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- <div class="content has-text-justified">
-          <p>
-            [TODO] :-?
-          </p>
-          <br>
-        </div> -->
-        <!-- <br><br> -->
-
-        <!-- <h3 class="title is-4">(iii) <span style="font-variant: small-caps;">Switch-Off</span> enables <tt>WiCLP</tt> to preserve Model Utility!</h3>
         <div class="container is-max-desktop has-text-centered">
           <div id="results-carousel" class="carousel results-carousel">
             <div class="item item-t2i1">
@@ -515,22 +320,58 @@
       </div>
     </div>
   
-  <div class="columns is-centered">
+  <div id="vit-decompose" class="columns is-centered">
     <div class="column is-full-width">
-      <h2 class="title is-3 has-text-centered">Mechanistically Understanding Internal Model Components Across Different ViTs</h2>
-      <!--
-      <div class="content has-text-centered">
-          <img src="./static/images/zero_shot/zero_shot.jpg" width="50%">
-      </div>
+      <a href="https://sriram.live/vit-decompose/">
+      <h2 class="title is-3 link has-text-centered">Mechanistically Understanding Model Components Across Different ViTs</h2>
+      </a>
+      <br>
       <div class="content has-text-justified">
+
         <p>
-        As seen in above Figure,
-        neuron-level modification at inference time is effective at removing styles.
-        This shows that knowledge about a particular style can be even more localized to a few neurons.
-        It is noteworthy that the extent of style removal increases with the modification of more neurons, albeit with a trade-off in the quality of generated images.
-        This arises because modified neurons may encapsulate information related to other visual attributes.
-        </p>
-      </div> -->
+          In text-to-image models, we were able to analyze and control the generation of concepts via causal tracing by perturbing carefully chosen text tokens in the input which correspond to the concept of interest. However, in vision models with image inputs, it is more challenging to carefully control and perturb the chosen concepts, which means that causal tracing is less effective in this setting. Thus, rather than understanding the model from the input side, we aim to understand the model from the <i>representation side</i>. Specifically, we use the following approach:
+        </p>  
+
+        <ol>
+          <li> We <i>decompose</i> the final representation as a sum of contributions from different model <i>components</i>. Furthermore, each of these component contributions can be decomposed over the image patch <i>tokens</i> </li>
+          <li> We then <i>map</i> each of these contributions to CLIP space where they can be interpreted using CLIP's <i>shared image-text representation space</i></li>
+          <li> Using the CLIP text encoder, we identify which components are responsible for encoding which concepts, and use them to retrieve or segment images, or ablate them to mitigate spurious correlations</li>
+
+        </ol>
+
+        <div class="container is-max-desktop has-text-centered">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-t2i1">
+              <img id="myt2i0" src="./static/images/vit_decompose/img_retrieval_1.png"
+              class="interpolation-image"/>
+            </div>
+            <div class="item item-t2i1">
+              <img id="myt2i0" src="./static/images/vit_decompose/token_viz.png"
+              class="interpolation-image"/>
+            </div>
+            <div class="item item-t2i1">
+              <img id="myt2i0" src="./static/images/vit_decompose/img_retrieval_2.png"
+              class="interpolation-image"/>
+            </div>
+            <div class="item item-t2i1">
+              <img id="myt2i0" src="./static/images/vit_decompose/table.png"
+              class="interpolation-image"/>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          Thus, even though the image space is unstructured and does not allow for controlled concept perturbations, we can still localize concepts to a significant extent by understanding the model components in terms of their contribution to the structured image-text representation space indexed via CLIP. 
+        </p> 
+<br>
+
+        <p>
+          <b>Future directions: </b> Although we were able to localize certain concepts via this approach, there are still many open questions. For one, we found that the direct controbutions of model components are not limited to one role - they are responsible for jointly encoding many concepts along with other concepts. This makes it difficult to ablate them without affecting other concepts. One way to address this is to probably select a subspace within each component that is responsible for encoding a single concept. Another direction is to understand how these components interact with each other to encode concepts, as it is likely that concept components are built out of simpler ones.
+        </p> 
+       
+      </div>
+
+      
 
         
     </div>
@@ -577,35 +418,7 @@
         
 </div>
   
-    <!--/ Matting. -->
-    <!-- <div class="container is-max-desktop">
-    
-      Latent space editing applications
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-3 has-text-centered">Related Works</h2>
-          <div class="content has-text-justified">
-            <p>
-              <li>Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Bjorn Ommer. <a href="https://arxiv.org/abs/2112.10752">High-resolution image synthesis with latent diffusion models.</a> In IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2022.</li><br>
-            </p>
-          </div>
-          Prompt Interpolation image
-        </div>
-      </div>
 
-    Concurrent Work.
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3 has-text-centered">Acknowledgements</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            This project was supported in part by a grant from an NSF CAREER AWARD 1942230, ONR YIP award N00014-22-1-2271, ARO’s Early Career Program Award 310902-00001, Army Grant No. W911NF2120076, the NSF award CCF2212458, NSF Award No. 2229885 (NSF Institute for Trustworthy AI in Law and Society, TRAILS), an Amazon Research Award and an award from Capital One.
-          </p>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Concurrent Work. -->
 
   </div>
 </section>
